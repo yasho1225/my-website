@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Services - BotWeb</title>
+  <style>
+    /* Same reset and nav styles as others */
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      background: #000;
+      color: #fff;
+      font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+      line-height: 1.6;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    nav {
+      background: #111;
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: center;
+      gap: 2.5rem;
+      border-bottom: 1px solid #222;
+      font-weight: 600;
+      letter-spacing: 0.05em;
+      font-size: 1rem;
+    }
+
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      position: relative;
+      padding-bottom: 4px;
+      transition: color 0.3s ease;
+    }
+
+    nav a::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      height: 2px;
+      width: 100%;
+      background: #fff;
+      transform: scaleX(0);
+      transform-origin: right;
+      transition: transform 0.3s ease;
+    }
+
+    nav a:hover,
+    nav a:focus {
+      color: #ddd;
+    }
+
+    nav a[aria-current="page"]::after {
+      transform: scaleX(1);
+      transform-origin: left;
+    }
+
+    main {
+      max-width: 1000px;
+      margin: 3rem auto;
+      padding: 0 2rem;
+    }
+
+    h1 {
+      font-size: 3rem;
+      font-weight: 900;
+      letter-spacing: 0.1em;
+      margin-bottom: 2rem;
+      text-transform: uppercase;
+      text-align: center;
+      color: #fff;
+      text-shadow: 0 0 10px rgba(255 255 255 / 0.2);
+    }
+
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 2.5rem;
+    }
+
+    .service {
+      background: #111;
+      padding: 1.5rem;
+      border-radius: 12px;
+      box-shadow: 0 0 18px rgba(255 255 255 / 0.1);
+      text-align: center;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .service:hover,
+    .service:focus-within {
+      transform: translateY(-6px);
+      box-shadow: 0 0 30px rgba(255 255 255 / 0.25);
+    }
+
+    .service h3 {
+      font-weight: 700;
+      margin-bottom: 1rem;
+      font-size: 1.5rem;
+      color: #fff;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+
+    .service p {
+      font-weight: 300;
+      color: #bbb;
+      font-size: 1rem;
+      line-height: 1.4;
+    }
+
+    footer {
+      background: #111;
+      padding: 1rem 2rem;
+      text-align: center;
+      font-size: 0.9rem;
+      color: #666;
+      border-top: 1px solid #222;
+      margin-top: auto;
+    }
+
+    @media (max-width: 600px) {
+      main {
+        padding: 0 1rem;
+      }
+      h1 {
+        font-size: 2rem;
+      }
+      nav {
+        gap: 1.5rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="services.html" aria-current="page">Services</a>
+  </nav>
+
+  <main>
+    <h1>Our Services</h1>
+    <div class="services-grid">
+      <div class="service">
+        <h3>Custom Website Design</h3>
+        <p>Modern, clean, and responsive websites tailored to your organization’s unique mission and goals.</p>
+      </div>
+      <div class="service">
+        <h3>AI Chatbots</h3>
+        <p>24/7 intelligent chatbots that engage your visitors, answer questions, and provide support automatically.</p>
+      </div>
+      <div class="service">
+        <h3>SEO Optimization</h3>
+        <p>Improved search engine rankings to help more people find your organization online.</p>
+      </div>
+      <div class="service">
+        <h3>Mobile Optimization</h3>
+        <p>All websites are fully responsive, providing a flawless experience on any device.</p>
+      </div>
+      <div class="service">
+        <h3>Donation & Fundraising Tools</h3>
+        <p>Easy-to-use online donation pages and chatbot features to boost fundraising efforts.</p>
+      </div>
+      <div class="service">
+        <h3>Training & Support</h3>
+        <p>Workshops and ongoing support to help your team manage your digital presence confidently.</p>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    &copy; 2025 BotWeb — Nonprofit Website & Chatbot Solutions
+  </footer>
+
+</body>
+</html>
