@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>About BotWeb</title>
+  <style>
+    /* Same styles as index but adjusted for content */
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      background: #000;
+      color: #fff;
+      font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+      line-height: 1.6;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    nav {
+      background: #111;
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: center;
+      gap: 2.5rem;
+      border-bottom: 1px solid #222;
+      font-weight: 600;
+      letter-spacing: 0.05em;
+      font-size: 1rem;
+    }
+
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      position: relative;
+      padding-bottom: 4px;
+      transition: color 0.3s ease;
+    }
+
+    nav a::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      height: 2px;
+      width: 100%;
+      background: #fff;
+      transform: scaleX(0);
+      transform-origin: right;
+      transition: transform 0.3s ease;
+    }
+
+    nav a:hover,
+    nav a:focus {
+      color: #ddd;
+    }
+
+    nav a[aria-current="page"]::after {
+      transform: scaleX(1);
+      transform-origin: left;
+    }
+
+    main {
+      max-width: 850px;
+      margin: 3rem auto;
+      padding: 0 2rem;
+    }
+
+    h1 {
+      font-size: 3rem;
+      font-weight: 900;
+      letter-spacing: 0.1em;
+      margin-bottom: 1rem;
+      text-transform: uppercase;
+      text-align: center;
+      color: #fff;
+      text-shadow: 0 0 10px rgba(255 255 255 / 0.2);
+    }
+
+    p {
+      font-weight: 300;
+      font-size: 1.15rem;
+      color: #ccc;
+      line-height: 1.7;
+      margin-bottom: 1.5rem;
+      max-width: 750px;
+      margin-left: auto;
+      margin-right: auto;
+      text-align: center;
+    }
+
+    footer {
+      background: #111;
+      padding: 1rem 2rem;
+      text-align: center;
+      font-size: 0.9rem;
+      color: #666;
+      border-top: 1px solid #222;
+      margin-top: auto;
+    }
+
+    @media (max-width: 600px) {
+      main {
+        padding: 0 1rem;
+      }
+      h1 {
+        font-size: 2rem;
+      }
+      p {
+        font-size: 1rem;
+      }
+      nav {
+        gap: 1.5rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="about.html" aria-current="page">About</a>
+    <a href="services.html">Services</a>
+  </nav>
+
+  <main>
+    <h1>About BotWeb</h1>
+    <p>BotWeb is a nonprofit dedicated to helping local businesses and charitable organizations build a powerful online presence. We specialize in creating custom websites and AI chatbots that improve communication, engagement, and support for the community.</p>
+    <p>Our mission is to empower those who serve their communities by providing affordable, cutting-edge digital tools designed to help you thrive in the digital world.</p>
+    <p>From sleek website design to intelligent chatbot integration, we tailor every solution to meet your unique needs and goals.</p>
+  </main>
+
+  <footer>
+    &copy; 2025 BotWeb — Nonprofit Website & Chatbot Solutions
+  </footer>
+
+</body>
+</html>
