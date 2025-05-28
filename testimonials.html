@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Read testimonials from BotWeb’s clients about our website and AI chatbot solutions.">
+  <title>Testimonials - BotWeb</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
+  <style>
+    main {
+      max-width: 850px;
+      margin: 3rem auto;
+      padding: 0 2rem;
+    }
+    .testimonial {
+      background: #111;
+      padding: 1.5rem;
+      border-radius: 12px;
+      margin-bottom: 1rem;
+      box-shadow: 0 0 18px rgba(255, 255, 255, 0.1);
+      transition: transform 0.3s ease;
+    }
+    .testimonial:hover {
+      transform: translateY(-6px);
+    }
+    .testimonial p {
+      font-style: italic;
+    }
+    .testimonial strong {
+      display: block;
+      margin-top: 1rem;
+      color: #fff;
+    }
+    @media (max-width: 600px) {
+      main {
+        padding: 0 1rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="services.html">Services</a>
+    <a href="portfolio.html">Portfolio</a>
+    <a href="testimonials.html" aria-current="page">Testimonials</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+
+  <main>
+    <h1 data-aos="fade-up">What Our Clients Say</h1>
+    <p data-aos="fade-up" data-aos-delay="100">Hear from local businesses and charities who’ve transformed their online presence with BotWeb.</p>
+    <div class="testimonial" data-aos="fade-up" data-aos-delay="200">
+      <p>“BotWeb’s website and chatbot solutions doubled our online donations in just three months.”</p>
+      <strong>— Local Charity Director</strong>
+    </div>
+    <div class="testimonial" data-aos="fade-up" data-aos-delay="300">
+      <p>“The AI chatbot keeps our customers engaged 24/7, saving us time and boosting sales.”</p>
+      <strong>— Small Business Owner</strong>
+    </div>
+    <div class="testimonial" data-aos="fade-up" data-aos-delay="400">
+      <p>“Their team made our site mobile-friendly and easy to manage. Highly recommend!”</p>
+      <strong>— Nonprofit Coordinator</strong>
+    </div>
+  </main>
+
+  <footer>
+    <p>© 2025 BotWeb — Nonprofit Website & Chatbot Solutions</p>
+    <p>
+      <a href="https://github.com/yasho1225" target="_blank">GitHub</a> |
+      <a href="mailto:contact@botweb.com">Email Us</a> |
+      <a href="https://x.com/botweb" target="_blank">X</a>
+    </p>
+  </footer>
+
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init({ duration: 800 });
+  </script>
+</body>
+</html>
