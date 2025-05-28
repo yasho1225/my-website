@@ -1,143 +1,86 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Learn about BotWeb’s mission to empower local businesses and charities with custom websites and AI chatbots.">
   <title>About BotWeb</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
   <style>
-    /* Same styles as index but adjusted for content */
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
-
-    body {
-      background: #000;
-      color: #fff;
-      font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-      line-height: 1.6;
-      min-height: 100vh;
-      display: flex;
-      flex-direction: column;
-    }
-
-    nav {
-      background: #111;
-      padding: 1rem 2rem;
-      display: flex;
-      justify-content: center;
-      gap: 2.5rem;
-      border-bottom: 1px solid #222;
-      font-weight: 600;
-      letter-spacing: 0.05em;
-      font-size: 1rem;
-    }
-
-    nav a {
-      color: #fff;
-      text-decoration: none;
-      position: relative;
-      padding-bottom: 4px;
-      transition: color 0.3s ease;
-    }
-
-    nav a::after {
-      content: "";
-      position: absolute;
-      left: 0;
-      bottom: 0;
-      height: 2px;
-      width: 100%;
-      background: #fff;
-      transform: scaleX(0);
-      transform-origin: right;
-      transition: transform 0.3s ease;
-    }
-
-    nav a:hover,
-    nav a:focus {
-      color: #ddd;
-    }
-
-    nav a[aria-current="page"]::after {
-      transform: scaleX(1);
-      transform-origin: left;
-    }
-
     main {
       max-width: 850px;
       margin: 3rem auto;
       padding: 0 2rem;
     }
-
-    h1 {
-      font-size: 3rem;
-      font-weight: 900;
-      letter-spacing: 0.1em;
-      margin-bottom: 1rem;
-      text-transform: uppercase;
-      text-align: center;
-      color: #fff;
-      text-shadow: 0 0 10px rgba(255 255 255 / 0.2);
+    .team-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 2rem;
+      margin-top: 2rem;
     }
-
-    p {
-      font-weight: 300;
-      font-size: 1.15rem;
-      color: #ccc;
-      line-height: 1.7;
-      margin-bottom: 1.5rem;
-      max-width: 750px;
-      margin-left: auto;
-      margin-right: auto;
-      text-align: center;
-    }
-
-    footer {
+    .team-member {
       background: #111;
-      padding: 1rem 2rem;
+      padding: 1.5rem;
+      border-radius: 12px;
       text-align: center;
-      font-size: 0.9rem;
-      color: #666;
-      border-top: 1px solid #222;
-      margin-top: auto;
+      box-shadow: 0 0 18px rgba(255, 255, 255, 0.1);
+      transition: transform 0.3s ease;
     }
-
+    .team-member:hover {
+      transform: translateY(-6px);
+    }
+    .team-member img {
+      width: 100%;
+      max-width: 150px;
+      border-radius: 50%;
+      margin-bottom: 1rem;
+    }
     @media (max-width: 600px) {
       main {
         padding: 0 1rem;
-      }
-      h1 {
-        font-size: 2rem;
-      }
-      p {
-        font-size: 1rem;
-      }
-      nav {
-        gap: 1.5rem;
       }
     }
   </style>
 </head>
 <body>
-
   <nav>
     <a href="index.html">Home</a>
     <a href="about.html" aria-current="page">About</a>
     <a href="services.html">Services</a>
+    <a href="portfolio.html">Portfolio</a>
+    <a href="testimonials.html">Testimonials</a>
+    <a href="contact.html">Contact</a>
   </nav>
 
   <main>
-    <h1>About BotWeb</h1>
-    <p>BotWeb is a nonprofit dedicated to helping local businesses and charitable organizations build a powerful online presence. We specialize in creating custom websites and AI chatbots that improve communication, engagement, and support for the community.</p>
-    <p>Our mission is to empower those who serve their communities by providing affordable, cutting-edge digital tools designed to help you thrive in the digital world.</p>
-    <p>From sleek website design to intelligent chatbot integration, we tailor every solution to meet your unique needs and goals.</p>
+    <h1 data-aos="fade-up">About BotWeb</h1>
+    <p data-aos="fade-up" data-aos-delay="100">BotWeb is a nonprofit dedicated to helping local businesses and charitable organizations build a powerful online presence. We specialize in creating custom websites and AI chatbots that improve communication, engagement, and support for the community.</p>
+    <p data-aos="fade-up" data-aos-delay="200">Our mission is to empower those who serve their communities by providing affordable, cutting-edge digital tools designed to help you thrive in the digital world.</p>
+    <p data-aos="fade-up" data-aos-delay="300">From sleek website design to intelligent chatbot integration, we tailor every solution to meet your unique needs and goals. Our team is passionate about technology and community impact.</p>
+    <h2 data-aos="fade-up" data-aos-delay="400">Our Team</h2>
+    <div class="team-grid">
+      <div class="team-member" data-aos="fade-up" data-aos-delay="500">
+        <img src="https://via.placeholder.com/150" alt="Team member">
+        <h3>Yash</h3>
+        <p>Lead Developer & AI Specialist</p>
+      </div>
+      <!-- Add more team members as needed -->
+    </div>
   </main>
 
   <footer>
-    &copy; 2025 BotWeb — Nonprofit Website & Chatbot Solutions
+    <p>© 2025 BotWeb — Nonprofit Website & Chatbot Solutions</p>
+    <p>
+      <a href="https://github.com/yasho1225" target="_blank">GitHub</a> |
+      <a href="mailto:contact@botweb.com">Email Us</a> |
+      <a href="https://x.com/botweb" target="_blank">X</a>
+    </p>
   </footer>
 
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init({ duration: 800 });
+  </script>
 </body>
 </html>
