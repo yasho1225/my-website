@@ -1,78 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>BotWeb - Landing</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="BotWeb creates sleek websites and AI chatbots for local businesses and charities, empowering communities online.">
+  <title>BotWeb - Empowering Communities Online</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
   <style>
-    /* Reset */
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
-
-    body {
-      background: #000;
-      color: #fff;
-      font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-      line-height: 1.6;
-      min-height: 100vh;
-      display: flex;
-      flex-direction: column;
-    }
-
-    /* Floating sticky nav */
-    nav {
-      position: sticky;
-      top: 0;
-      background: #111;
-      padding: 1rem 2rem;
-      display: flex;
-      justify-content: center;
-      gap: 2.5rem;
-      border-bottom: 1px solid #222;
-      font-weight: 600;
-      letter-spacing: 0.05em;
-      font-size: 1rem;
-      z-index: 1000;
-      box-shadow: 0 2px 10px rgba(0,0,0,0.7);
-    }
-
-    nav a {
-      color: #fff;
-      text-decoration: none;
-      position: relative;
-      padding-bottom: 4px;
-      transition: color 0.3s ease;
-    }
-
-    nav a::after {
-      content: "";
-      position: absolute;
-      left: 0;
-      bottom: 0;
-      height: 2px;
-      width: 100%;
-      background: #fff;
-      transform: scaleX(0);
-      transform-origin: right;
-      transition: transform 0.3s ease;
-    }
-
-    nav a:hover,
-    nav a:focus {
-      color: #ddd;
-    }
-
-    nav a:hover::after,
-    nav a:focus::after {
-      transform: scaleX(1);
-      transform-origin: left;
-    }
-
     header {
-      flex: 1;
       display: flex;
       flex-direction: column;
       justify-content: center;
@@ -81,113 +17,61 @@
       max-width: 900px;
       margin: 0 auto;
     }
-
-    header h1 {
-      font-size: 3.5rem;
-      font-weight: 900;
-      letter-spacing: 0.15em;
-      margin-bottom: 1rem;
-      text-transform: uppercase;
-      line-height: 1.1;
-      color: #fff;
-      text-shadow: 0 0 15px rgba(255 255 255 / 0.15);
-    }
-
-    header p {
-      font-size: 1.25rem;
-      font-weight: 300;
-      color: #ccc;
-      max-width: 600px;
-      margin: 0 auto 2.5rem;
-      line-height: 1.5;
-    }
-
-    /* Buttons container */
     .btn-group {
       display: inline-flex;
       gap: 1rem;
     }
-
-    .btn-primary {
-      background: #fff;
-      color: #000;
-      font-weight: 700;
-      text-transform: uppercase;
-      padding: 1rem 3rem;
-      border-radius: 40px;
-      text-decoration: none;
-      font-size: 1.15rem;
-      box-shadow: 0 0 12px rgba(255 255 255 / 0.3);
-      transition: background-color 0.3s ease, color 0.3s ease;
-      display: inline-block;
-    }
-
-    .btn-primary:hover,
-    .btn-primary:focus {
-      background: #ddd;
-      color: #000;
-    }
-
-    .btn-secondary {
-      background: transparent;
-      border: 2px solid #fff;
-      color: #fff;
-      font-weight: 700;
-      text-transform: uppercase;
-      padding: 1rem 3rem;
-      border-radius: 40px;
-      font-size: 1.15rem;
-      cursor: pointer;
-      box-shadow: 0 0 12px rgba(255 255 255 / 0.2);
-      transition: background-color 0.3s ease, color 0.3s ease;
-    }
-
-    .btn-secondary:hover,
-    .btn-secondary:focus {
-      background: #fff;
-      color: #000;
-    }
-
-    /* Image styling */
     .hero-image {
       margin: 3rem auto 0;
       max-width: 800px;
       width: 90%;
       border-radius: 12px;
-      box-shadow: 0 0 30px rgba(255 255 255 / 0.2);
+      box-shadow: 0 0 30px rgba(255, 255, 255, 0.2);
       filter: grayscale(100%) contrast(120%);
       transition: filter 0.5s ease;
     }
-
     .hero-image:hover {
       filter: grayscale(0%) contrast(110%);
     }
-
-    footer {
-      background: #111;
-      padding: 1rem 2rem;
-      text-align: center;
-      font-size: 0.9rem;
-      color: #666;
-      border-top: 1px solid #222;
-      margin-top: auto;
+    .why-us, .testimonials, .cta {
+      max-width: 1000px;
+      margin: 3rem auto;
+      padding: 0 2rem;
     }
-
+    .why-us-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 2rem;
+    }
+    .why-us-item {
+      background: #111;
+      padding: 1.5rem;
+      border-radius: 12px;
+      text-align: center;
+      box-shadow: 0 0 18px rgba(255, 255, 255, 0.1);
+      transition: transform 0.3s ease;
+    }
+    .why-us-item:hover {
+      transform: translateY(-6px);
+    }
+    .testimonial {
+      background: #111;
+      padding: 1.5rem;
+      border-radius: 12px;
+      margin-bottom: 1rem;
+      box-shadow: 0 0 18px rgba(255, 255, 255, 0.1);
+    }
+    .cta {
+      text-align: center;
+      background: linear-gradient(45deg, #1e90ff, #00b7eb);
+      padding: 3rem 2rem;
+      border-radius: 12px;
+    }
     @media (max-width: 600px) {
-      header h1 {
-        font-size: 2.5rem;
-      }
-      header p {
-        font-size: 1rem;
-      }
-      nav {
-        gap: 1.5rem;
-      }
       .btn-group {
         flex-direction: column;
       }
-      .btn-primary,
-      .btn-secondary {
+      .btn-primary, .btn-secondary {
         width: 100%;
         padding: 1rem 0;
         text-align: center;
@@ -196,31 +80,73 @@
   </style>
 </head>
 <body>
-
   <nav>
     <a href="index.html" aria-current="page">Home</a>
     <a href="about.html">About</a>
     <a href="services.html">Services</a>
+    <a href="portfolio.html">Portfolio</a>
+    <a href="testimonials.html">Testimonials</a>
+    <a href="contact.html">Contact</a>
   </nav>
 
-  <header>
+  <header data-aos="fade-up">
     <h1>BotWeb</h1>
     <p>Building sleek websites & AI chatbots for local businesses and charities — empowering your community online.</p>
     <div class="btn-group">
-      <a href="about.html" class="btn-primary">Learn More</a>
-      <button class="btn-secondary" aria-label="Book Now">Book Now</button>
+      <a href="about.html" class="btn-primary" data-aos="fade-up" data-aos-delay="100">Learn More</a>
+      <a href="contact.html" class="btn-secondary" data-aos="fade-up" data-aos-delay="200">Book Now</a>
     </div>
-    <img 
-      src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
-      alt="Modern web design on laptop" 
-      class="hero-image" 
-      loading="lazy"
-    />
+    <img src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Modern web design on laptop" class="hero-image" loading="lazy" data-aos="zoom-in">
   </header>
 
+  <section class="why-us" data-aos="fade-up">
+    <h2>Why Choose BotWeb?</h2>
+    <div class="why-us-grid">
+      <div class="why-us-item" data-aos="fade-up" data-aos-delay="100">
+        <h3>Affordable Solutions</h3>
+        <p>Cost-effective websites and chatbots tailored for small businesses and nonprofits.</p>
+      </div>
+      <div class="why-us-item" data-aos="fade-up" data-aos-delay="200">
+        <h3>Community Focus</h3>
+        <p>We prioritize local organizations, helping them thrive online.</p>
+      </div>
+      <div class="why-us-item" data-aos="fade-up" data-aos-delay="300">
+        <h3>Cutting-Edge Tech</h3>
+        <p>Modern designs and AI-driven chatbots for seamless user experiences.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="testimonials" data-aos="fade-up">
+    <h2>What Our Clients Say</h2>
+    <div class="testimonial" data-aos="fade-up" data-aos-delay="100">
+      <p>“BotWeb built us a stunning website that doubled our donations!”</p>
+      <p><strong>— Local Charity Director</strong></p>
+    </div>
+    <div class="testimonial" data-aos="fade-up" data-aos-delay="200">
+      <p>“The AI chatbot keeps our customers engaged 24/7. Highly recommend!”</p>
+      <p><strong>— Small Business Owner</strong></p>
+    </div>
+  </section>
+
+  <section class="cta" data-aos="fade-up">
+    <h2>Ready to Transform Your Online Presence?</h2>
+    <p>Contact us today for a free consultation.</p>
+    <a href="contact.html" class="btn-primary">Get Started</a>
+  </section>
+
   <footer>
-    &copy; 2025 BotWeb — Nonprofit Website & Chatbot Solutions
+    <p>© 2025 BotWeb — Nonprofit Website & Chatbot Solutions</p>
+    <p>
+      <a href="https://github.com/yasho1225" target="_blank">GitHub</a> |
+      <a href="mailto:contact@botweb.com">Email Us</a> |
+      <a href="https://x.com/botweb" target="_blank">X</a>
+    </p>
   </footer>
 
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init({ duration: 800 });
+  </script>
 </body>
 </html>
