@@ -145,9 +145,9 @@ section {
   width: 90%;
 }
 
-/* Specific styling for About Us section content (no background overlay) */
+/* Specific styling for About Us section content (fully transparent background) */
 .about-us .section-content {
-  background: none;
+  background: transparent;
   border-radius: 0;
 }
 
