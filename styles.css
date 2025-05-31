@@ -141,10 +141,20 @@ section {
   transform: translate(-50%, -50%);
   text-align: center;
   padding: 2rem;
-  background: rgba(0, 0, 0, 0.8); /* Darker black overlay */
-  border-radius: 20px;
   max-width: 1200px;
   width: 90%;
+}
+
+/* Specific styling for About Us section content (no background overlay) */
+.about-us .section-content {
+  background: none;
+  border-radius: 0;
+}
+
+/* Add text shadow for readability in About Us section */
+.about-us h1,
+.about-us .slogan {
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.8);
 }
 
 .about-us h1 {
@@ -167,6 +177,13 @@ section {
   padding: 12rem 4rem;
   min-height: 90vh;
   background: url('https://images.unsplash.com/photo-1560264356-6b3a1e5e8c78?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80') no-repeat center center/cover;
+}
+
+/* Keep overlay for other sections */
+.donations .section-content,
+.contact-us .section-content {
+  background: rgba(0, 0, 0, 0.8);
+  border-radius: 20px;
 }
 
 .donations h2 {
