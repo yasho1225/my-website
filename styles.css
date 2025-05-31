@@ -22,8 +22,7 @@ body {
   top: 0;
   left: 0;
   right: 0;
-  background: rgba(50, 50, 50, 0.5);
-  backdrop-filter: blur(10px);
+  background: #000000;
   padding: 1.5rem 4rem;
   display: flex;
   justify-content: space-between;
@@ -31,11 +30,11 @@ body {
   font-weight: 700;
   font-size: 1.1rem;
   z-index: 1000;
-  transition: background 0.5s ease-in-out, padding 0.5s ease-in-out;
+  transition: padding 0.5s ease-in-out;
 }
 
 .navbar.scrolled {
-  background: rgba(50, 50, 50, 0.9);
+  background: #000000;
   padding: 1rem 4rem;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
 }
@@ -124,8 +123,14 @@ body {
 section {
   position: relative;
   width: 100%;
-  min-height: 80vh;
   overflow: hidden;
+}
+
+/* About Us Section (Charity: Water Style) */
+.about-us {
+  height: 100vh;
+  min-height: 1000px;
+  background: url('https://images.unsplash.com/photo-1451187580459-43490279c0fa?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80') no-repeat center center/cover;
   margin-top: 80px; /* Offset for fixed navbar */
 }
 
@@ -142,49 +147,72 @@ section {
   width: 90%;
 }
 
-.about-us {
-  padding: 10rem 4rem 6rem;
-  min-height: 80vh;
-  background: url('https://images.unsplash.com/photo-1451187580459-43490279c0fa?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80') no-repeat center center/cover;
-}
-
-.donations {
-  padding: 12rem 4rem;
-  min-height: 90vh;
-  background: url('https://images.unsplash.com/photo-1560264356-6b3a1e5e8c78?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80') no-repeat center center/cover;
-}
-
-.contact-us {
-  padding: 12rem 4rem;
-  min-height: 90vh;
-  background: url('https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80') no-repeat center center/cover;
-}
-
 .about-us h1 {
-  font-size: 4.5rem;
+  font-size: 6rem;
   font-weight: 700;
   margin-bottom: 2rem;
   color: #ffffff;
   text-transform: uppercase;
 }
 
-.slogan {
-  font-size: 2.5rem;
+.about-us .slogan {
+  font-size: 3rem;
   font-weight: 400;
   color: #cccccc;
-  margin-bottom: 2.5rem;
   font-style: italic;
 }
 
-.about-us p,
-.donations p,
-.contact-us p {
-  font-weight: 400;
+/* Support Our Mission (Donations) Section */
+.donations {
+  padding: 12rem 4rem;
+  min-height: 90vh;
+  background: url('https://images.unsplash.com/photo-1560264356-6b3a1e5e8c78?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80') no-repeat center center/cover;
+}
+
+.donations h2 {
+  font-size: 4rem;
+  font-weight: 700;
+  margin-bottom: 3rem;
+  color: #ffffff;
+}
+
+.donations p {
   font-size: 1.8rem;
   color: #ffffff;
   line-height: 2;
   margin-bottom: 2.5rem;
   max-width: 1000px;
+}
+
+/* Contact Us Section */
+.contact-us {
+  padding: 12rem 4rem;
+  min-height: 90vh;
+  background: url('https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80') no-repeat center center/cover;
+}
+
+.contact-us h2 {
+  font-size: 4rem;
+  font-weight: 700;
+  margin-bottom: 3rem;
+  color: #ffffff;
+}
+
+.contact-us p {
+  font-size: 1.8rem;
+  color: #ffffff;
+  line-height: 2;
+  margin-bottom: 2rem;
+}
+
+.contact-us a {
+  color: #cccccc;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.contact-us a:hover {
+  color: #ffffff;
 }
 
 .btn-group {
@@ -276,8 +304,16 @@ footer a:hover {
   }
 
   .about-us {
-    padding: 8rem 2rem 5rem;
-    min-height: 70vh;
+    height: 80vh;
+    min-height: 800px;
+  }
+
+  .about-us h1 {
+    font-size: 4rem;
+  }
+
+  .about-us .slogan {
+    font-size: 2rem;
   }
 
   .donations,
@@ -290,15 +326,11 @@ footer a:hover {
     padding: 1.5rem;
   }
 
-  .about-us h1 {
-    font-size: 3.5rem;
+  .donations h2,
+  .contact-us h2 {
+    font-size: 3rem;
   }
 
-  .slogan {
-    font-size: 2rem;
-  }
-
-  .about-us p,
   .donations p,
   .contact-us p {
     font-size: 1.5rem;
@@ -351,8 +383,16 @@ footer a:hover {
   }
 
   .about-us {
-    padding: 6rem 1.5rem 4rem;
-    min-height: 60vh;
+    height: 70vh;
+    min-height: 600px;
+  }
+
+  .about-us h1 {
+    font-size: 3rem;
+  }
+
+  .about-us .slogan {
+    font-size: 1.5rem;
   }
 
   .donations,
@@ -365,15 +405,11 @@ footer a:hover {
     padding: 1rem;
   }
 
-  .about-us h1 {
+  .donations h2,
+  .contact-us h2 {
     font-size: 2.5rem;
   }
 
-  .slogan {
-    font-size: 1.5rem;
-  }
-
-  .about-us p,
   .donations p,
   .contact-us p {
     font-size: 1.2rem;
