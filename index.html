@@ -9,7 +9,7 @@
   <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
 </head>
 <body>
-  <!-- Floating Navigation Bar -->
+  <!-- Floating Navigation Bar (Inspired by Charity: Water) -->
   <nav class="navbar" data-aos="fade-down">
     <div class="nav-logo">
       <a href="index.html" aria-label="BotWeb Home">
@@ -33,29 +33,36 @@
   <main>
     <!-- About Us Section -->
     <section class="about-us" data-aos="fade-up">
-      <h1>BotWeb</h1>
-      <p class="slogan">Digitize Your Dream, Your Dream Our Code</p>
-      <p>We are a dedicated team passionate about empowering businesses and charities with professional websites and AI chatbots. Our mission is to bring your digital vision to life with cutting-edge technology and personalized solutions.</p>
-      <div class="btn-group">
-        <a href="about.html" class="btn-primary" data-aos="fade-up" data-aos-delay="100">Learn More</a>
+      <div class="section-content">
+        <h1>BotWeb</h1>
+        <p class="slogan">Digitize Your Dream, Your Dream Our Code</p>
+        <p>We are a dedicated team passionate about empowering businesses and charities with professional websites and AI chatbots. Our mission is to bring your digital vision to life with cutting-edge technology and personalized solutions, tailored to meet your unique needs and goals.</p>
+        <div class="btn-group">
+          <a href="about.html" class="btn-primary" data-aos="fade-up" data-aos-delay="100">Learn More</a>
+        </div>
       </div>
-      <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80" alt="Digital network over cityscape" class="hero-image" loading="lazy" data-aos="zoom-in">
     </section>
 
-    <!-- Donations Section -->
+    <!-- Support Our Mission (Donations) Section -->
     <section class="donations" data-aos="fade-up">
-      <h2>Support Our Mission</h2>
-      <p>Your donations help us provide affordable digital solutions to charities and small businesses. Every contribution makes a difference in empowering communities online.</p>
-      <a href="#donate" class="btn-primary" data-aos="fade-up" data-aos-delay="100">Donate Now</a>
+      <div class="section-content">
+        <h2>Support Our Mission</h2>
+        <p>Your donations help us provide affordable digital solutions to charities and small businesses. Every contribution makes a difference in empowering communities online, enabling access to technology that transforms lives and supports growth.</p>
+        <p>Join hundreds of supporters who have helped us reach new milestones in digital inclusion!</p>
+        <a href="#donate" class="btn-primary" data-aos="fade-up" data-aos-delay="100">Donate Now</a>
+      </div>
     </section>
 
     <!-- Contact Us Section -->
     <section class="contact-us" data-aos="fade-up">
-      <h2>Contact Us</h2>
-      <p>Ready to digitize your dream? Reach out to us for a professional consultation.</p>
-      <p>Email: <a href="mailto:contact@botweb.com">contact@botweb.com</a></p>
-      <p>Follow us on <a href="https://x.com/botweb" target="_blank">X</a> for updates.</p>
-      <a href="contact.html" class="btn-secondary" data-aos="fade-up" data-aos-delay="100">Get in Touch</a>
+      <div class="section-content">
+        <h2>Contact Us</h2>
+        <p>Ready to digitize your dream? Reach out to us for a professional consultation. Our team is here to guide you every step of the way, from concept to launch, ensuring your project succeeds.</p>
+        <p>Email: <a href="mailto:contact@botweb.com">contact@botweb.com</a></p>
+        <p>Phone: <a href="tel:+1234567890">+1 (234) 567-890</a></p>
+        <p>Follow us on <a href="https://x.com/botweb" target="_blank">X</a> for updates.</p>
+        <a href="contact.html" class="btn-secondary" data-aos="fade-up" data-aos-delay="100">Get in Touch</a>
+      </div>
     </section>
   </main>
 
@@ -79,6 +86,16 @@
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script>
     AOS.init({ duration: 800 });
+
+    // Navbar background change on scroll (Charity: Water style)
+    window.addEventListener('scroll', function() {
+      const navbar = document.querySelector('.navbar');
+      if (window.scrollY > 50) {
+        navbar.classList.add('scrolled');
+      } else {
+        navbar.classList.remove('scrolled');
+      }
+    });
   </script>
 </body>
 </html>
