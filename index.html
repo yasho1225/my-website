@@ -7,88 +7,27 @@
   <title>BotWeb - Empowering Communities Online</title>
   <link rel="stylesheet" href="styles.css">
   <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
-  <style>
-    header {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      text-align: center;
-      padding: 6rem 2rem 4rem;
-      max-width: 900px;
-      margin: 0 auto;
-    }
-    .btn-group {
-      display: inline-flex;
-      gap: 1rem;
-    }
-    .hero-image {
-      margin: 3rem auto 0;
-      max-width: 800px;
-      width: 90%;
-      border-radius: 12px;
-      box-shadow: 0 0 30px rgba(255, 255, 255, 0.2);
-      filter: grayscale(100%) contrast(120%);
-      transition: filter 0.5s ease;
-    }
-    .hero-image:hover {
-      filter: grayscale(0%) contrast(110%);
-    }
-    .why-us, .testimonials, .cta {
-      max-width: 1000px;
-      margin: 3rem auto;
-      padding: 0 2rem;
-    }
-    .why-us-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 2rem;
-    }
-    .why-us-item {
-      background: #111;
-      padding: 1.5rem;
-      border-radius: 12px;
-      text-align: center;
-      box-shadow: 0 0 18px rgba(255, 255, 255, 0.1);
-      transition: transform 0.3s ease;
-    }
-    .why-us-item:hover {
-      transform: translateY(-6px);
-    }
-    .testimonial {
-      background: #111;
-      padding: 1.5rem;
-      border-radius: 12px;
-      margin-bottom: 1rem;
-      box-shadow: 0 0 18px rgba(255, 255, 255, 0.1);
-    }
-    .cta {
-      text-align: center;
-      background: linear-gradient(45deg, #1e90ff, #00b7eb);
-      padding: 3rem 2rem;
-      border-radius: 12px;
-    }
-    @media (max-width: 600px) {
-      .btn-group {
-        flex-direction: column;
-      }
-      .btn-primary, .btn-secondary {
-        width: 100%;
-        padding: 1rem 0;
-        text-align: center;
-      }
-    }
-  </style>
 </head>
 <body>
-  <nav>
-    <a href="index.html" aria-current="page">Home</a>
-    <a href="about.html">About</a>
-    <a href="services.html">Services</a>
-    <a href="portfolio.html">Portfolio</a>
-    <a href="testimonials.html">Testimonials</a>
-    <a href="contact.html">Contact</a>
+  <!-- Sticky Navigation Bar -->
+  <nav class="navbar" data-aos="fade-down">
+    <div class="nav-logo">
+      <img src="logo.png" alt="BotWeb Logo" class="logo-img" aria-label="BotWeb Home">
+    </div>
+    <ul class="nav-links">
+      <li><a href="index.html" aria-current="page">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="services.html">Services</a></li>
+      <li><a href="portfolio.html">Portfolio</a></li>
+      <li><a href="testimonials.html">Testimonials</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <div class="nav-donate">
+      <a href="#donate" class="donate-btn">Donate Now</a>
+    </div>
   </nav>
 
+  <!-- Header Section -->
   <header data-aos="fade-up">
     <h1>BotWeb</h1>
     <p>Building sleek websites & AI chatbots for local businesses and charities — empowering your community online.</p>
@@ -99,6 +38,7 @@
     <img src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Modern web design on laptop" class="hero-image" loading="lazy" data-aos="zoom-in">
   </header>
 
+  <!-- Why Choose BotWeb Section -->
   <section class="why-us" data-aos="fade-up">
     <h2>Why Choose BotWeb?</h2>
     <div class="why-us-grid">
@@ -117,6 +57,7 @@
     </div>
   </section>
 
+  <!-- Testimonials Section -->
   <section class="testimonials" data-aos="fade-up">
     <h2>What Our Clients Say</h2>
     <div class="testimonial" data-aos="fade-up" data-aos-delay="100">
@@ -129,12 +70,14 @@
     </div>
   </section>
 
+  <!-- Call to Action Section -->
   <section class="cta" data-aos="fade-up">
     <h2>Ready to Transform Your Online Presence?</h2>
     <p>Contact us today for a free consultation.</p>
     <a href="contact.html" class="btn-primary">Get Started</a>
   </section>
 
+  <!-- Footer -->
   <footer>
     <p>© 2025 BotWeb — Nonprofit Website & Chatbot Solutions</p>
     <p>
