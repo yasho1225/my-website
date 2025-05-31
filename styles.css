@@ -17,14 +17,14 @@ body {
 }
 
 /* Navigation */
-nav {
+.navbar {
   position: sticky;
   top: 0;
   background: #111;
   padding: 1rem 2rem;
   display: flex;
-  justify-content: center;
-  gap: 2.5rem;
+  justify-content: space-between;
+  align-items: center;
   border-bottom: 1px solid #222;
   font-weight: 600;
   letter-spacing: 0.05em;
@@ -33,7 +33,19 @@ nav {
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.7);
 }
 
-nav a {
+.nav-logo .logo-img {
+  height: 40px; /* Adjust based on your logo size */
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links li a {
   color: #fff;
   text-decoration: none;
   position: relative;
@@ -41,7 +53,7 @@ nav a {
   transition: color 0.3s ease;
 }
 
-nav a::after {
+.nav-links li a::after {
   content: "";
   position: absolute;
   left: 0;
@@ -54,15 +66,66 @@ nav a::after {
   transition: transform 0.3s ease;
 }
 
-nav a:hover,
-nav a:focus,
-nav a[aria-current="page"]::after {
+.nav-links li a:hover,
+.nav-links li a:focus,
+.nav-links li a[aria-current="page"]::after {
   color: #ddd;
   transform: scaleX(1);
   transform-origin: left;
 }
 
-/* Buttons */
+.nav-donate .donate-btn {
+  background: linear-gradient(45deg, #1e90ff, #00b7eb);
+  color: #fff;
+  font-weight: 700;
+  text-transform: uppercase;
+  padding: 0.8rem 2rem;
+  border-radius: 40px;
+  text-decoration: none;
+  box-shadow: 0 0 12px rgba(255, 255, 255, 0.3);
+  transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.nav-donate .donate-btn:hover,
+.nav-donate .donate-btn:focus {
+  background: linear-gradient(45deg, #00b7eb, #1e90ff);
+  transform: scale(1.05);
+}
+
+/* Header Styles */
+header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  padding: 4rem 2rem;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+header h1 {
+  font-size: 3rem;
+  font-weight: 900;
+  letter-spacing: 0.1em;
+  margin-bottom: 1rem;
+  text-transform: uppercase;
+  text-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+}
+
+header p {
+  font-weight: 300;
+  font-size: 1.15rem;
+  color: #ccc;
+  line-height: 1.7;
+  margin-bottom: 1.5rem;
+  max-width: 750px;
+}
+
+.btn-group {
+  display: inline-flex;
+  gap: 1rem;
+}
+
 .btn-primary {
   background: #fff;
   color: #000;
@@ -74,7 +137,6 @@ nav a[aria-current="page"]::after {
   font-size: 1.15rem;
   box-shadow: 0 0 12px rgba(255, 255, 255, 0.3);
   transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
-  display: inline-block;
 }
 
 .btn-primary:hover,
@@ -105,30 +167,109 @@ nav a[aria-current="page"]::after {
   transform: scale(1.05);
 }
 
-/* General */
-h1 {
-  font-size: 3rem;
+.hero-image {
+  margin: 2rem auto 0;
+  max-width: 800px;
+  width: 90%;
+  border-radius: 12px;
+  box-shadow: 0 0 30px rgba(255, 255, 255, 0.2);
+  filter: grayscale(100%) contrast(120%);
+  transition: filter 0.5s ease;
+}
+
+.hero-image:hover {
+  filter: grayscale(0%) contrast(110%);
+}
+
+/* Why Us Section */
+.why-us {
+  max-width: 1000px;
+  margin: 3rem auto;
+  padding: 0 2rem;
+}
+
+.why-us h2 {
+  font-size: 2.5rem;
   font-weight: 900;
-  letter-spacing: 0.1em;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.why-us-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+}
+
+.why-us-item {
+  background: #111;
+  padding: 1.5rem;
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: 0 0 18px rgba(255, 255, 255, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.why-us-item:hover {
+  transform: translateY(-6px);
+}
+
+.why-us-item h3 {
+  font-size: 1.5rem;
   margin-bottom: 1rem;
-  text-transform: uppercase;
-  text-align: center;
-  color: #fff;
-  text-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
 }
 
-p {
-  font-weight: 300;
+.why-us-item p {
+  font-size: 1rem;
+}
+
+/* Testimonials Section */
+.testimonials {
+  max-width: 1000px;
+  margin: 3rem auto;
+  padding: 0 2rem;
+}
+
+.testimonials h2 {
+  font-size: 2.5rem;
+  font-weight: 900;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.testimonial {
+  background: #111;
+  padding: 1.5rem;
+  border-radius: 12px;
+  margin-bottom: 1rem;
+  box-shadow: 0 0 18px rgba(255, 255, 255, 0.1);
+}
+
+.testimonial p {
+  font-size: 1rem;
+}
+
+/* CTA Section */
+.cta {
+  max-width: 1000px;
+  margin: 3rem auto;
+  padding: 3rem 2rem;
+  text-align: center;
+  background: linear-gradient(45deg, #1e90ff, #00b7eb);
+  border-radius: 12px;
+}
+
+.cta h2 {
+  font-size: 2.5rem;
+  font-weight: 900;
+  margin-bottom: 1rem;
+}
+
+.cta p {
   font-size: 1.15rem;
-  color: #ccc;
-  line-height: 1.7;
-  margin-bottom: 1.5rem;
-  max-width: 750px;
-  margin-left: auto;
-  margin-right: auto;
-  text-align: center;
 }
 
+/* Footer */
 footer {
   background: #111;
   padding: 1rem 2rem;
@@ -150,15 +291,50 @@ footer a:hover {
 }
 
 /* Media Queries */
-@media (max-width: 600px) {
-  h1 {
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    gap: 1rem;
+    padding: 1rem;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    gap: 1rem;
+    text-align: center;
+  }
+
+  .nav-donate .donate-btn {
+    width: 100%;
+    padding: 0.8rem;
+    text-align: center;
+  }
+
+  header {
+    padding: 3rem 1rem;
+  }
+
+  header h1 {
     font-size: 2rem;
   }
-  p {
+
+  header p {
     font-size: 1rem;
   }
-  nav {
-    gap: 1.5rem;
+
+  .btn-group {
+    flex-direction: column;
+  }
+
+  .btn-primary,
+  .btn-secondary {
+    width: 100%;
+    padding: 1rem 0;
+    text-align: center;
+  }
+
+  .hero-image {
+    width: 95%;
   }
 }
 
