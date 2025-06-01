@@ -3,19 +3,19 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="We build sleek websites and AI chatbots for local businesses and charities, empowering communities online.">
-  <meta name="keywords" content="nonprofit website design, AI chatbots for charities, local business websites, custom web development, fundraising tools">
+  <meta name="description" content="We build sleek websites for local businesses and charities, empowering communities online.">
+  <meta name="keywords" content="nonprofit website design, local business websites, custom web development, fundraising tools">
   <meta name="author" content="BotWeb">
   <!-- Open Graph -->
   <meta property="og:title" content="BotWeb - We Build Websites. You Build Impact.">
-  <meta property="og:description" content="Empowering local businesses and charities with custom websites and AI chatbots.">
+  <meta property="og:description" content="Empowering local businesses and charities with custom websites.">
   <meta property="og:image" content="https://yasho1225.github.io/my-website/img/hero.webp">
   <meta property="og:url" content="https://yasho1225.github.io/my-website/">
   <meta property="og:type" content="website">
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="BotWeb - We Build Websites. You Build Impact.">
-  <meta name="twitter:description" content="Empowering local businesses and charities with custom websites and AI chatbots.">
+  <meta name="twitter:description" content="Empowering local businesses and charities with custom websites.">
   <meta name="twitter:image" content="https://yasho1225.github.io/my-website/img/hero.webp">
   <title>BotWeb - Empowering Communities Online</title>
   <link rel="stylesheet" href="styles.css">
@@ -70,6 +70,7 @@
       color: #fff;
       margin-bottom: 1rem;
       text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+      white-space: nowrap;
     }
     .hero-content p {
       font-size: 1.15rem;
@@ -80,7 +81,7 @@
       display: inline-flex;
       gap: 1rem;
     }
-    .why-us, .services-preview, .testimonials, .cta, .chatbot-demo {
+    .why-us, .services-preview, .testimonials, .cta {
       max-width: 1000px;
       margin: 3rem auto;
       padding: 0 2rem;
@@ -122,22 +123,8 @@
     }
     .cta {
       text-align: center;
-      background: linear-gradient(45deg, #1e90ff, #00b7eb);
-      padding: 3rem 2rem;
-      border-radius: 12px;
-    }
-    .chatbot-demo {
-      text-align: center;
       background: #111;
-      padding: 2rem;
-      border-radius: 12px;
-      box-shadow: 0 0 18px rgba(255, 255, 255, 0.1);
-    }
-    .chatbot-demo iframe {
-      width: 100%;
-      max-width: 400px;
-      height: 400px;
-      border: none;
+      padding: 3rem 2rem;
       border-radius: 12px;
     }
     @media (max-width: 768px) {
@@ -161,9 +148,6 @@
       header {
         height: 70vh;
       }
-      .chatbot-demo iframe {
-        height: 300px;
-      }
     }
   </style>
   <!-- Schema Markup -->
@@ -174,7 +158,7 @@
       "name": "BotWeb",
       "url": "https://yasho1225.github.io/my-website/",
       "logo": "https://yasho1225.github.io/my-website/img/logo.png",
-      "description": "BotWeb builds custom websites and AI chatbots for local businesses and charities, empowering communities online.",
+      "description": "BotWeb builds custom websites for local businesses and charities, empowering communities online.",
       "contactPoint": {
         "@type": "ContactPoint",
         "email": "contact@botweb.com",
@@ -192,13 +176,13 @@
     <a href="index.html" aria-current="page">Home</a>
     <a href="about.html">About</a>
     <a href="services.html">Services</a>
-    <a href="portfolio.html">Portfolio</a>
     <a href="testimonials.html">Testimonials</a>
     <a href="contact.html">Contact</a>
+    <a href="donate.html" class="nav-donate">Donate Now</a>
   </nav>
 
   <header data-aos="fade-up">
-    <img class="hero-bg" src="https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" alt="Modern website on laptop" loading="lazy">
+    <img class="hero-bg" src="https://images.unsplash.com/photo-1523240795612-9a054b0db644?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" alt="Community collaboration for charity" loading="lazy">
     <div class="hero-overlay"></div>
     <div class="hero-content">
       <h1 data-aos="fade-up">We build websites. You build Impact.</h1>
@@ -216,7 +200,7 @@
     <div class="why-us-grid">
       <div class="why-us-item" data-aos="fade-up" data-aos-delay="200">
         <h3>Affordable Solutions</h3>
-        <p>Cost-effective websites and chatbots tailored for small businesses and nonprofits.</p>
+        <p>Cost-effective websites tailored for small businesses and nonprofits.</p>
       </div>
       <div class="why-us-item" data-aos="fade-up" data-aos-delay="300">
         <h3>Community Focus</h3>
@@ -224,7 +208,7 @@
       </div>
       <div class="why-us-item" data-aos="fade-up" data-aos-delay="400">
         <h3>Cutting-Edge Tech</h3>
-        <p>Modern websites and AI chatbots for seamless, engaging experiences.</p>
+        <p>Modern websites for seamless, engaging experiences.</p>
       </div>
     </div>
   </section>
@@ -238,33 +222,22 @@
         <p>Responsive, SEO-optimized websites designed for your mission.</p>
       </div>
       <div class="service" data-aos="fade-up" data-aos-delay="300">
-        <h3>AI Chatbots</h3>
-        <p>Intelligent 24/7 support to engage visitors and boost efficiency.</p>
-      </div>
-      <div class="service" data-aos="fade-up" data-aos-delay="400">
         <h3>Fundraising Tools</h3>
-        <p>Custom donation pages and chatbot features to maximize impact.</p>
+        <p>Custom donation pages to maximize impact.</p>
       </div>
     </div>
     <p class="cta" data-aos="fade-up" data-aos-delay="500"><a href="services.html" class="btn-primary">Explore All Services</a></p>
-  </section>
-
-  <section class="chatbot-demo" data-aos="fade-up">
-    <h2>Try Our Chatbot Demo</h2>
-    <p data-aos="fade-up" data-aos-delay="100">Experience how our AI chatbots engage your visitors in real-time.</p>
-    <iframe src="https://www.tidiochat.com/chat/your-tidio-key" title="BotWeb Chatbot Demo" data-aos="fade-up" data-aos-delay="200"></iframe>
-    <p data-aos="fade-up" data-aos-delay="300"><a href="contact.html" class="btn-secondary">Request a Custom Chatbot</a></p>
   </section>
 
   <section class="testimonials" data-aos="fade-up">
     <h2>What Our Clients Say</h2>
     <p data-aos="fade-up" data-aos-delay="100">Hear from organizations we’ve helped transform their online presence.</p>
     <div class="testimonial" data-aos="fade-up" data-aos-delay="200">
-      <p>“BotWeb’s website and chatbot doubled our donations in just three months!”</p>
+      <p>“BotWeb’s website doubled our donations in just three months!”</p>
       <p><strong>— Local Charity Director</strong></p>
     </div>
     <div class="testimonial" data-aos="fade-up" data-aos-delay="300">
-      <p>“The AI chatbot keeps our customers engaged 24/7. Highly recommend!”</p>
+      <p>“Their custom website keeps our customers engaged. Highly recommend!”</p>
       <p><strong>— Small Business Owner</strong></p>
     </div>
   </section>
@@ -276,7 +249,7 @@
   </section>
 
   <footer>
-    <p>© 2025 BotWeb — Nonprofit Website & Chatbot Solutions</p>
+    <p>© 2025 BotWeb — Nonprofit Website Solutions</p>
     <p>
       <a href="https://github.com/yasho1225" target="_blank" aria-label="GitHub">GitHub</a> |
       <a href="mailto:contact@botweb.com" aria-label="Email Us">Email Us</a> |
